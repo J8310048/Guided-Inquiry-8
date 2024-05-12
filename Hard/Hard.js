@@ -20,16 +20,55 @@ function privateInfo() {
             SSN: "333-333-3333"
         }
     }
-    return function () {
-        return PII
-    }
+
+    return {
+        patient1: {
+            getName: function () {
+                return PII.patient1.name;
+            },
+            getSSN: function () {
+                return PII.patient1.SSN;
+            }
+        },
+        patient2: {
+            getName: function () {
+                return PII.patient2.name;
+            },
+            getSSN: function () {
+                return PII.patient2.SSN;
+            }
+        },
+        patient3: {
+            getName: function () {
+                return PII.patient3.name;
+            },
+            getSSN: function () {
+                return PII.patient3.SSN;
+            }
+        },
+        patient4: {
+            getName: function () {
+                return PII.patient4.name;
+            },
+            getSSN: function () {
+                return PII.patient4.SSN;
+            }
+        }
+    };
 };
 
 
+console.log(privateInfo().patient1.name);
+console.log(privateInfo().patient1.SSN);
+console.log(privateInfo().patient2.name);
+console.log(privateInfo().patient2.SSN);
 
-
-
-console.log(privateInfo().PII.patient1.name);
+console.log(privateInfo().patient1.getName());
+console.log(privateInfo().patient1.getSSN());
+console.log(privateInfo().patient2.getName());
+console.log(privateInfo().patient2.getSSN());
+console.log(privateInfo().patient3.getName());
+console.log(privateInfo().patient3.getSSN());
 
 // Example below
 
